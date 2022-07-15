@@ -7,7 +7,8 @@ def txt_importer(path_file):
     if ".txt" not in path_file:
         return print("Formato inválido", file=sys.stderr)
     try:
-        lines = open(path_file).readlines() #https://www.w3schools.com/python/ref_file_readlines.asp
+        #https://www.w3schools.com/python/ref_file_readlines.asp
+        lines = open(path_file).readlines()
         for line in lines:
             line_break = line.split('\n')
             file.append(line_break[0])
