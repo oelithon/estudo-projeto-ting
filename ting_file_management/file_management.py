@@ -1,4 +1,3 @@
-import readline
 import sys
 
 def txt_importer(path_file):
@@ -8,7 +7,7 @@ def txt_importer(path_file):
         return print("Formato inválido", file=sys.stderr)
 
     try:
-        lines = open(path_file).readlines()
+        lines = open(path_file).readlines() #https://www.w3schools.com/python/ref_file_readlines.asp
 
         for line in lines:
             line_break = line.split('\n')
