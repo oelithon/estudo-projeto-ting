@@ -7,10 +7,14 @@ def txt_importer(path_file):
     if ".txt" not in path_file:
         return print("Formato inválido", file=sys.stderr)
 
-    lines = open(path_file).readlines()
+    try:
+        lines = open(path_file).readlines()
 
-    for line in lines:
-        line_break = line.split('\n')
-        file.append(line_break[0])
+        for line in lines:
+            line_break = line.split('\n')
+            file.append(line_break[0])
+
+    except FileNotFoundError:
+        return print(f"Arquivo {path_file} não encontrado", file=sys.stderr)
 
     return file
