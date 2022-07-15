@@ -1,2 +1,5 @@
+import sys
+
 def txt_importer(path_file):
-    """Aqui irá sua implementação"""
+    if ".txt" not in path_file:
+        return print("Formato inválido", file=sys.stderr)
