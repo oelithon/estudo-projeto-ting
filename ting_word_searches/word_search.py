@@ -12,7 +12,7 @@ def exists_word(word, instance):
         for line in range(len_data):
             if word.upper() in data[line].upper():
                 frequency_word.append({"linha": line + 1})
-    
+
         if frequency_word:
             result.append({
                 "palavra": word,
@@ -21,7 +21,6 @@ def exists_word(word, instance):
             })
 
     return result
-
 
 
 def search_by_word(word, instance):
